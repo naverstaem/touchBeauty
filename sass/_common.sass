@@ -84,9 +84,9 @@ body
   width: 1120px
 input, textarea
   +placeholder
-    font-size: 13px
-    color: #bcbcbc
-    +rr
+    font-size: 16px
+    color: #b8b8b8
+    font-family: 'robotoitalic'
 %in
   max-width: 1200px
   width: 960px
@@ -123,12 +123,12 @@ input, textarea
     background-color: lighten(#55c9c9, 20%)
 .title
   text-align: center
-  font-size: 43px
+  font-size: 30px
   +rr
   line-height: 1.2em
-  color: #4d4d4d
+  color: #7db9ae
   span
-    +rr
+    font-family: 'robotomedium'
 
 
 
@@ -136,10 +136,16 @@ input, textarea
 
 
 .counter
-  width: 300px
   position: relative
-  margin: 0 auto
-  margin-left: 0
+  margin: 20px auto 0 0
+  height: 60px
+  background-color: rgba(#af998b, .3)
+  &:before
+    position: absolute
+    content: ""
+    +s(watch_ico)
+    top: 12px
+    left: 30px
   p
     color: #bbbbbb
     margin-bottom: 10px
@@ -157,10 +163,11 @@ input, textarea
     margin: 0
     padding: 0
     display: inline-block
+    margin-left: 50px
 
     li
       float: left
-      margin: 0 10px
+      margin: 0 8px
       text-align: center
       position: relative
       &:first-of-type
@@ -173,65 +180,47 @@ input, textarea
         position: relative
         +text-shadow(0 1px 0 #fff)
         display: block
-        font-size: 30px
-        padding-top: 8px
+        font-size: 40px
         +box
-        width: 59px
-        height: 59px
-        +rr
+        font-family: 'robotobold'
         color: #fff
-        font-family: 'open_sanssemibold'
-        +border-radius(50%)
-        +background-clip(padding-box)
-        background-color: #ed99bd
         &.last
           &:after
-            background: none
+            content: ""
         &:after
           position: absolute
-          content: ''
-          +s(column)
-          top: 20px
-          right: -11px
+          content: ':'
+          top: 0
+          right: -15px
 
 .form
-  width: 362px
-  height: 486px
-  margin-top: -32px
-  padding: 5px
+  background: url(../img/form_bg.png) center center no-repeat
+  width: 280px
+  height: 320px
+  margin-top: 0
+  padding: 0
   position: relative
   +box
   .caption
     box-sizing: border-box
-    padding-top: 50px
-
-
-
-
-  h3
-    margin-top: 0
-    margin-bottom: 0
-    font-size: 38px
-    font-weight: normal
+    padding-top: 20px
     text-align: center
-    +rr
-    color: #ffffff
-    text-transform: uppercase
-    line-height: 1em
-    letter-spacing: 3px
-  h4
-    margin-top: 0
-    margin-bottom: 20px
-    font-size: 19px
-    text-align: center
-    font-weight: normal
-    +rr
-    color: #ffffff
-    line-height: 1em
+    h3
+      margin-top: 0
+      margin-bottom: 0
+      font-size: 18px
+      font-weight: normal
+      text-align: center
+      +rr
+      color: #4f2b27
+      text-transform: uppercase
+      line-height: 1em
+      letter-spacing: 3px
+
 
 
 .frm
-  padding-top: 10px
+  padding-top: 30px
 
   //box-sizing: border-box
   +box
@@ -256,43 +245,39 @@ form
   position: relative
   input
     padding-left: 20px
-    width: 267px
-    height: 45px
+    width: 210px
+    height: 40px
     background: #fff
     display: block
     margin: auto auto 10px
-    +border-radius(23px)
+    +border-radius(9px)
     +background-clip(padding-box)
     +box
-    font-size: 18px
-    +background-image(linear-gradient(to bottom, rgba(255,255,255,.28) 154.88%, rgba(0,0,0,.28) 254.88%))
+    font-size: 16px
+    line-height: 16px
+    border: 1px solid rgba(79,43,39,.1)
 
 
 
 .button
   +box
   +border-radius(4px)
-  padding: 0 71px
-  height: 67px
-  color: #a59144
-  +single-text-shadow(#b2b2b2)
+  padding: 6px 35px
+  color: #ffffff
+  +single-text-shadow()
   display: block
   margin: 20px auto auto
-  +rr
-  font-size: 23px
+  font-family: 'robotomedium'
+  font-size: 14px
   +background-clip(padding-box)
-  +border-radius(33px)
+  +border-radius(15px)
   letter-spacing: 1px
   text-decoration: none
-  background-color: #ffe375
+  background-color: #af998b
   text-transform: uppercase
-  +box-shadow(0 2px 0 #c9ae4e, inset 0 -1px 0 rgba(255,255,255,.1))
-  +background-image(linear-gradient(to bottom, rgba(255,255,255,.04) 0%, rgba(0,0,0,.04) 100%))
-
-
 
   &:hover
-    background-color: lighten(#ffe375, 10%)
+    background-color: lighten(#af998b, 10%)
 // common blocks      
 
 
