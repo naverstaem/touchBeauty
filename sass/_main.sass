@@ -1,0 +1,196 @@
+// Normally mainpage styles 
+//+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
+
+
+.top
+  padding-top: 30px
+  +box
+  +clr
+  height: 90px
+  .top_in
+    @extend %in
+    +clr
+  nav
+    float: left
+    ul
+      font-size: 14px
+      padding: 0
+      li
+        display: inline-block
+        float: left
+        margin-right: 50px
+        font-family: 'robotoregular'
+        color: #625d74
+        text-transform: uppercase
+        line-height: 1em
+        &:last-child
+          margin-right: 0
+        a
+          text-decoration: none
+          color: inherit
+          border-bottom: solid 1px
+          &:hover
+            border-bottom: solid 3px
+          &.is-active
+            border-bottom: solid 3px
+  .top__callme
+    float: left
+    margin-left: 110px
+    text-align: right
+    margin-top: -6px
+
+  .top__phone
+    float: left
+    position: relative
+    margin-left: 35px
+    &:before
+      position: absolute
+      content: ""
+      +s(phone)
+      top: 2px
+      left: -20px
+    a
+      vertical-align: top
+    h3
+      font-size: 18px
+      color: #000
+      line-height: 1em
+      font-family: 'robotolight'
+      font-weight: normal
+      margin-top: -8px
+      margin-bottom: 8px
+
+  .top__callback
+    float: left
+    h3
+      color: #949494
+      font-size: 13px
+      margin-right: 20px
+      font-family: 'robotoregular'
+      font-weight: normal
+
+
+
+
+header
+  +clr
+  .header_in
+    @extend %in
+    +clr
+
+  .header__top
+    background: url(../img/header_bg.jpg) center center no-repeat
+    height: 230px
+    +background-size(cover)
+    h1
+      display: inline-block
+      width: 390px
+      font-family: 'robotoregular'
+      color: #000
+      text-transform: uppercase
+      margin-top: 60px
+      margin-left: 80px
+      span
+        font-family: 'robotobold_italic'
+        color: #7db9ae
+  .header__text
+    float: left
+    width: 500px
+    margin-top: 140px
+    h3, h1
+      +rr
+      color: white
+      display: inline-block
+      font-size: 46px
+      background: rgb(86,202,202)
+      padding: 3px 20px 8px
+      margin-bottom: 5px
+      line-height: 1em
+    h4
+      font-size: 28px
+      color: #535353
+      +rr
+      margin-top: 10px
+    h5
+      position: relative
+      +rr
+      font-size: 18px
+      margin-top: 90px
+      padding-left: 18px
+      &:before
+        position: absolute
+        content: ""
+        border-left: solid 5px rgb(86,202,202)
+        top: 4px
+        bottom: 4px
+        left: 0
+
+
+
+
+
+
+
+
+.review
+  padding-top: 70px
+  +box
+  +clr
+
+  .review_in
+    @extend %in
+    position: relative
+    &:before
+      position: absolute
+      content: ""
+      top: 25px
+      +s(wave2)
+      left: 50%
+      +transform(translate(-50%))
+  &__item
+    display: inline-block
+    width: 307px
+    margin-right: 34px
+    margin-top: 100px
+    &:last-child
+      margin-right: 0px
+  &__caption
+    h3
+      +rr
+      font-size: 18px
+      color: #56caca
+    h4
+      font-size: 12px
+      +rr
+      color: #949494
+  &__img
+    float: left
+    width: 53px
+    height: 53px
+    margin-right: 15px
+    img
+      +border-radius(50%)
+  &__text
+    border: 1px solid #e2e2e2
+    +border-radius(5px)
+    padding: 25px
+    position: relative
+    font-size: 13px
+    +rr
+    margin-top: 30px
+    &:before
+      position: absolute
+      content: ''
+      top: -7px
+      left: 20px
+      +s(review_popup)
+
+
+
+
+.bottom
+
+
+
+
+footer

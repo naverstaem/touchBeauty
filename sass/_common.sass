@@ -1,0 +1,405 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+=rr
+  font-family: "robotoregular"
+  font-weight: normal
+  font-style: normal
+
+
+
+
+
+input.error, textarea.error, select.error
+  box-shadow: inset 0 0 10px red !important
+label.error
+  display: none !important
+
+
+.icon
+  display: inline-block
+  position: relative
+
+body
+  font-size: 14px
+  line-height: 1.4
+  background-color: rgb(247,237,222)
+  color: #3e3e3e
+  font-family: 'open_sanslight'
+.out
+  background: #ffffff
+  position: relative
+  margin: 0 auto
+  width: 1120px
+input, textarea
+  +placeholder
+    font-size: 13px
+    color: #bcbcbc
+    +rr
+%in
+  max-width: 1200px
+  width: 960px
+  margin-left: auto
+  margin-right: auto
+
+.myFancyClose
+  position: absolute
+  top: -37px
+  right: -38px
+  +s(close)
+
+.btn
+  display: inline-block
+  +border-radius(15px)
+  background: #7db9ad
+  padding: 3px 24px
+  color: #ffffff
+  text-transform: uppercase
+  font-family: 'robotomedium'
+  font-size: 14px
+  border: 3px solid #7db9ad
+  text-decoration: none
+  +transition(background, .5s)
+  &:hover
+    color: #7db9ad
+    background-color: lighten(#ffffff,10%)
+.button--blue
+  background-color: #55c9c9
+  +box-shadow(0 2px 0 #44aaa9, inset 0 -1px 0 rgba(255,255,255,.1))
+  color: #287c7c
+  font-size: 23px
+  &:hover
+    background-color: lighten(#55c9c9, 20%)
+.title
+  text-align: center
+  font-size: 43px
+  +rr
+  line-height: 1.2em
+  color: #4d4d4d
+  span
+    +rr
+
+
+
+
+
+
+.counter
+  width: 300px
+  position: relative
+  margin: 0 auto
+  margin-left: 0
+  p
+    color: #bbbbbb
+    margin-bottom: 10px
+    margin-top: 5px
+    font-size: 12px
+    position: static
+    font-family: 'open_sansregular'
+    &.counter-title
+      +rr
+      font-size: 13px
+      color: #3e3e3e
+      text-transform: uppercase
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    li
+      float: left
+      margin: 0 10px
+      text-align: center
+      position: relative
+      &:first-of-type
+        margin-left: 0
+      &:last-of-type
+        margin-right: 0
+
+
+      span
+        position: relative
+        +text-shadow(0 1px 0 #fff)
+        display: block
+        font-size: 30px
+        padding-top: 8px
+        +box
+        width: 59px
+        height: 59px
+        +rr
+        color: #fff
+        font-family: 'open_sanssemibold'
+        +border-radius(50%)
+        +background-clip(padding-box)
+        background-color: #ed99bd
+        &.last
+          &:after
+            background: none
+        &:after
+          position: absolute
+          content: ''
+          +s(column)
+          top: 20px
+          right: -11px
+
+.form
+  width: 362px
+  height: 486px
+  margin-top: -32px
+  padding: 5px
+  position: relative
+  +box
+  .caption
+    box-sizing: border-box
+    padding-top: 50px
+
+
+
+
+  h3
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 38px
+    font-weight: normal
+    text-align: center
+    +rr
+    color: #ffffff
+    text-transform: uppercase
+    line-height: 1em
+    letter-spacing: 3px
+  h4
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 19px
+    text-align: center
+    font-weight: normal
+    +rr
+    color: #ffffff
+    line-height: 1em
+
+
+.frm
+  padding-top: 10px
+
+  //box-sizing: border-box
+  +box
+
+
+
+  h4
+    text-align: center
+    color: #ffffff
+    margin: 5px 0 0
+    font-weight: normal
+    font-family: 'Conv_PFDinTextCondPro-Thin'
+    font-size: 18px
+  h5
+    @extend h4
+    margin: 0
+    font-size: 24px
+    span
+      font-family: 'conv_pfdintextcondpro-light'
+form
+  margin-top: -10px
+  position: relative
+  input
+    padding-left: 20px
+    width: 267px
+    height: 45px
+    background: #fff
+    display: block
+    margin: auto auto 10px
+    +border-radius(23px)
+    +background-clip(padding-box)
+    +box
+    font-size: 18px
+    +background-image(linear-gradient(to bottom, rgba(255,255,255,.28) 154.88%, rgba(0,0,0,.28) 254.88%))
+
+
+
+.button
+  +box
+  +border-radius(4px)
+  padding: 0 71px
+  height: 67px
+  color: #a59144
+  +single-text-shadow(#b2b2b2)
+  display: block
+  margin: 20px auto auto
+  +rr
+  font-size: 23px
+  +background-clip(padding-box)
+  +border-radius(33px)
+  letter-spacing: 1px
+  text-decoration: none
+  background-color: #ffe375
+  text-transform: uppercase
+  +box-shadow(0 2px 0 #c9ae4e, inset 0 -1px 0 rgba(255,255,255,.1))
+  +background-image(linear-gradient(to bottom, rgba(255,255,255,.04) 0%, rgba(0,0,0,.04) 100%))
+
+
+
+  &:hover
+    background-color: lighten(#ffe375, 10%)
+// common blocks      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
