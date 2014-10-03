@@ -1,0 +1,621 @@
+// Normally mainpage styles 
+//+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
+
+
+.top
+  +box
+  +clr
+  height: 90px
+  .top_in
+    @extend %in
+    +clr
+    padding-top: 30px
+  nav
+    float: left
+    ul
+      font-size: 14px
+      padding: 0
+      li
+        display: inline-block
+        float: left
+        margin-right: 50px
+        font-family: 'robotoregular'
+        color: #625d74
+        text-transform: uppercase
+        line-height: 1em
+        &:last-child
+          margin-right: 0
+        a
+          text-decoration: none
+          color: inherit
+          border-bottom: solid 1px
+          &:hover
+            border-bottom: solid 3px
+          &.is-active
+            border-bottom: solid 3px
+  .top__callme
+    float: left
+    margin-left: 108px
+    text-align: right
+    margin-top: -6px
+
+  .top__phone
+    float: left
+    position: relative
+    margin-left: 35px
+    &:before
+      position: absolute
+      content: ""
+      +s(phone)
+      top: -8px
+      left: -20px
+    a
+      vertical-align: top
+    h3
+      font-size: 18px
+      color: #000
+      line-height: 1em
+      font-family: 'robotolight'
+      font-weight: normal
+      margin-top: -8px
+      margin-bottom: 8px
+
+  .top__callback
+    float: left
+    h3
+      color: #949494
+      font-size: 13px
+      margin-right: 20px
+      font-family: 'robotoregular'
+      font-weight: normal
+
+
+
+
+header
+  +clr
+  .header_in
+    @extend %in
+    +clr
+
+  .header__top
+    background: url(../img/header_bg.jpg) center center no-repeat
+    height: 230px
+    +background-size(cover)
+    h1
+      display: inline-block
+      width: 390px
+      font-family: 'robotoregular'
+      color: #000
+      text-transform: uppercase
+      margin-top: 60px
+      margin-left: 80px
+      span
+        font-family: 'robotobold_italic'
+        color: #7db9ae
+  .header__text
+    float: left
+    width: 500px
+    margin-top: 140px
+    h3, h1
+      +rr
+      color: white
+      display: inline-block
+      font-size: 46px
+      background: rgb(86,202,202)
+      padding: 3px 20px 8px
+      margin-bottom: 5px
+      line-height: 1em
+    h4
+      font-size: 28px
+      color: #535353
+      +rr
+      margin-top: 10px
+    h5
+      position: relative
+      +rr
+      font-size: 18px
+      margin-top: 90px
+      padding-left: 18px
+      &:before
+        position: absolute
+        content: ""
+        border-left: solid 5px rgb(86,202,202)
+        top: 4px
+        bottom: 4px
+        left: 0
+
+
+.scrollMenu
+  //@extend header
+  @extend .top
+  .top_in
+    padding-top: 20px
+  position: fixed
+  z-index: 999
+  width: 100%
+  top: 0
+  left: 0
+  bottom: auto
+  display: none
+  height: 60px
+  +box
+  background: rgba(#ffffff, .8)
+  .top
+    height: 0
+
+.dream
+  +clr
+  padding-top: 40px
+  .dream_in
+    @extend %in
+  &__img
+    float: left
+    width: 170px
+    margin-top: 25px
+    img
+      display: block
+  &__price
+    text-align: center
+    margin-top: 10px
+    +rr
+    color: #a21817
+    font-size: 32px
+  &__price--old
+    color: #acacac
+    font-size: 24px
+    position: relative
+    &:after
+      position: absolute
+      content: ""
+      left: 0
+      right: 0
+      height: 0
+      top: 18px
+      border: solid 1px
+  &__text
+    float: left
+    width: 445px
+    margin-left: 30px
+    h3
+      font-size: 32px
+      color: #625d74
+      +rr
+      line-height: 1.2em
+
+    p
+      font-family: 'robotolight'
+      color: #888888
+      font-size: 18px
+      margin-top: 25px
+
+  &__form
+    float: right
+
+
+
+.about
+  +clr
+  background: url(../img/about_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 460px
+  margin-top: 100px
+  border-top: dashed 3px rgb(217,217,217)
+  .about_in
+    @extend %in
+  h2
+    display: inline-block
+    padding: 0 45px
+    background: #ffffff
+    position: relative
+    top: -35px
+    left: 50%
+    +transform(translate(-50%))
+
+  &__tech
+    +clr
+    position: relative
+    float: left
+    width: 200px
+    +border-radius(20px)
+    +background-clip(padding-box)
+    border: dashed 3px #e7e7e7
+    color: #626262
+    font-size: 13px
+    font-family: 'robotolight'
+    padding: 26px 20px
+    +box
+    i
+      position: absolute
+      top: -30px
+      left: 50%
+      +transform(translate(-50%))
+      width: 50px
+      height: 50px
+      border: 2px solid #d9d9d9
+      +border-radius(50%)
+      +background-clip(padding-box)
+      background-color: #fff
+      &:before
+        +s(info_ico)
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+        +transform(translate(-50%, -50%))
+
+    p
+      margin-bottom: 10px
+      span
+        text-transform: uppercase
+  &__branch
+    position: absolute
+    top: -175px
+    left: -95px
+    img
+      display: block
+  &__text
+    +clr
+    float: left
+    margin-left: 35px
+    width: 500px
+    p
+      font-family: 'robotolight'
+      font-size: 18px
+      color: #888888
+      margin-bottom: 25px
+
+.specs
+  background: url(../img/specs_bg.png) center center no-repeat
+  height: 360px
+  +background-size(cover)
+  overflow: hidden
+  .specs_in
+    @extend %in
+    width: 1000px
+    position: relative
+  &__img
+    width: 540px
+    height: 371px
+    position: absolute
+    top: 42px
+    left: -130px
+    img
+      display: block
+
+  &__text
+    float: right
+    width: 570px
+    padding-top: 40px
+    +box
+    h2
+      text-align: left
+      color: #625d74
+    ul
+      font-family: 'robotolight'
+      font-size: 16px
+      color: #000000
+      margin-top: 25px
+      li
+        position: relative
+        padding-left: 40px
+        margin-bottom: 10px
+        &:before
+          position: absolute
+          content: ""
+          +s(bullet_ico)
+          left: 0
+          top: 4px
+
+.work
+  +clr
+  padding-top: 55px
+  .work_in
+    @extend %in
+  h2
+    color: #625d74
+    margin-bottom: 50px
+
+  &__item
+    position: relative
+    width: 160px
+    vertical-align: top
+    text-align: center
+    display: inline-block
+    margin-right: 90px
+    &:after
+      position: absolute
+      content: ""
+      top: 27%
+      right: -95px
+      +s(arrow_ico)
+    &:last-child
+      margin-right: 0
+      &:after
+        background: none
+
+    .work__img
+      display: inline-block
+      +background-clip(padding-box)
+      width: 135px
+      height: 135px
+      +border-radius(50%)
+      +background(linear-gradient(to bottom, rgb(171,231,220), rgb(125,185,174)))
+      padding: 10px
+      +box
+      .work__img-in
+        position: relative
+        width: 116px
+        height: 116px
+        +border-radius(50%)
+        background: #ffffff
+        &.second
+          &:after
+            +s(work_ico2)
+        &.third
+          &:after
+            +s(work_ico3)
+        &.fourth
+          &:after
+            +s(work_ico4)
+        &:after
+          position: absolute
+          content: ""
+          +s(work_ico1)
+          top: 50%
+          left: 50%
+          +transform(translate(-50%, -50%))
+    p
+      line-height: 1.2em
+      margin-top: 20px
+      font-family: 'robotolight'
+      font-size: 18px
+      color: #888888
+.review
+  margin-top: 85px
+  +box
+  +clr
+  border-top: dashed 3px rgb(217,217,217)
+
+  h2
+    display: inline-block
+    padding: 0 20px
+    background: #ffffff
+    position: relative
+    top: -20px
+    left: 50%
+    +transform(translate(-50%))
+  .review_in
+    @extend %in
+    position: relative
+
+  &__item
+    display: inline-block
+    width: 470px
+    margin-right: 8px
+    margin-top: 45px
+    margin-bottom: 15px
+    vertical-align: top
+    &:last-child
+      margin-right: 0px
+
+  &__img
+    float: left
+    width: 90px
+    height: 90px
+    margin-right: 10px
+    img
+      +border-radius(50%)
+      display: block
+  &__text
+    float: left
+    width: 367px
+    border: 1px solid #d9d9d9
+    +border-radius(21px)
+    +background-clip(padding-box)
+    padding: 20px
+    position: relative
+    +box
+    &:before
+      position: absolute
+      content: ""
+      top: 35px
+      left: -9px
+      +s(review_popup)
+    h3
+      +rr
+      font-size: 24px
+      color: #625d74
+    p
+      font-size: 14px
+      font-family: 'robotolight'
+      color: #888888
+      margin-top: 15px
+  &__buttons
+    width: 315px
+    margin: 0 auto
+  &__button-more
+    float: left
+    padding: 6px 21px
+    background: #615d73
+    &:hover
+      background-color: lighten(#615d73, 10%)
+  &__button-add
+    position: relative
+    float: right
+    background: #615d73
+    padding: 6px 25px 6px 41px
+    &:hover
+      background-color: lighten(#615d73, 10%)
+    span
+      position: absolute
+      top: 10px
+      left: 20px
+
+      font-family: 'robotobold'
+      font-size: 24px
+      line-height: 13px
+
+.action
+  +clr
+  padding-top: 55px
+  .action_in
+    @extend %in
+    width: 910px
+    +clr
+  &__img
+    +clr
+    float: left
+    width: 393px
+    img
+
+      display: block
+  &__text
+    text-align: center
+    +clr
+    margin-left: 35px
+    float: left
+    width: 140px
+    h3
+      +rr
+      color: #625d74
+      font-size: 24px
+  &__hurry
+    line-height: 1em
+    margin-top: 40px
+    margin-bottom: 80px
+    position: relative
+    font-family: 'robotolight'
+    font-size: 18px
+    color: #888888
+    &:after
+      position: absolute
+      content: ''
+      bottom: -30px
+      right: -50px
+      +s(action-arrow_ico)
+  &__price
+    text-align: center
+    +rr
+    color: #a21817
+    font-size: 32px
+    line-height: 1em
+  &__price--old
+    color: #acacac
+    font-size: 24px
+    position: relative
+    &:after
+      position: absolute
+      content: ""
+      left: 0
+      right: 0
+      height: 0
+      top: 18px
+      border: solid 1px
+
+  &__form
+    +clr
+    float: right
+
+
+.also
+  border-top: dashed 3px rgb(217,217,217)
+  margin-top: 90px
+  padding-bottom: 95px
+  h2
+    display: inline-block
+    padding: 0 20px
+    background: #ffffff
+    position: relative
+    top: -20px
+    left: 50%
+    +transform(translate(-50%))
+  .also_in
+    @extend %in
+    width: 860px
+  &__item
+    padding-bottom: 25px
+    padding-top: 33px
+    text-align: center
+    display: inline-block
+    margin-right: 15px
+    margin-top: 50px
+    width: 270px
+    border: 1px solid #d9d9d9
+    vertical-align: top
+    +border-radius(21px)
+    +background-clip(padding-box)
+    &:last-child
+      margin-right: 0
+  &__caption
+    color: #625d74
+    +rr
+    font-size: 22px
+  &__img
+    margin-top: 20px
+    display: inline-block
+    width: 250px
+    height: 169px
+    img
+      display: block
+  &__price
+    text-align: center
+    +rr
+    color: #a21817
+    font-size: 32px
+    line-height: 1em
+  &__price--old
+    color: #acacac
+    font-size: 24px
+    position: relative
+    &:after
+      position: absolute
+      content: ""
+      left: 0
+      right: 0
+      height: 0
+      top: 18px
+      border: solid 1px
+  &__form
+    margin-top: 22px
+    .button--form
+      background: rgb(98,93,116)
+      padding: 6px 32px
+      &:hover
+        background-color: lighten(rgb(98,93,116), 10%)
+    .button--about
+      display: inline-block
+      background: rgb(125, 185, 174)
+      margin-top: 8px
+      &:hover
+        background-color: lighten(rgb(125, 185, 174), 10%)
+
+
+
+.about-popup
+  width: 610px
+  background: #ffffff
+  +border-radius(20px)
+  text-align: center
+  padding: 35px
+  &__img
+    display: inline-block
+    width: 530px
+    height: 220px
+    img
+      display: block
+  &__text
+    +rr
+    h3
+      font-size: 24px
+      color: #625d74
+      margin: 25px 0
+    p
+      font-size: 18px
+      color: #888888
+      text-align: left
+
+    h4
+      font-size: 32px
+      color: #a21817
+      margin-top: 14px
