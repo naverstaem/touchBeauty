@@ -4,61 +4,12 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-    $('#form1').validate();
-    $('#form5').validate();
+    $('#form1 form').validate();
     $('#form2').validate();
     $('#form3').validate();
     $('#form4').validate();
-    $('#form6').validate();
+    $('#form5 form').validate();
 
-    $("#form1").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form5").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form2").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form3").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form4").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form6").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
 
 
 //    var checker = document.getElementById('yes');
@@ -74,14 +25,18 @@ head.ready(function() {
 //
 //        };
 //    });
-
+   $('#moreReviews').click(function () {
+      $('#otherItems').slideToggle("normal");
+       return false;
+   });
 
 
     $('.fancybox').fancybox({
         padding: 0,
         helpers: {
             overlay: {
-                locked: false
+                locked: false,
+                css:{'background' : 'rgba(0, 0, 0, 0.5)'}
             }
         },
         tpl: {
@@ -124,7 +79,7 @@ head.ready(function() {
             var seconds = Math.floor((distance % _minute) / _second);
             if (seconds < 10) seconds = '0' + seconds;
 
-            $(".count_line .d").html(days);
+            //$(".count_line .d").html(days);
             $(".count_line .h").html(hours);
             $(".count_line .m").html(minutes);
             $(".count_line .s").html(seconds);

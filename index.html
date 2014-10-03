@@ -5,6 +5,7 @@
     <title>Touch Beauty</title>
     <meta name="viewport" content="initial-scale=1"/>
     <link rel="stylesheet" href="css/fonts/fonts.css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.css"/>
     <link rel="stylesheet" href="css/screen.css"/>
     <!--[if IE]>
     <script src="js/html5shiv.js"></script><![endif]-->
@@ -101,7 +102,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="frm" id="frm-first">
+            <div class="frm" id="form1">
 
                 <form action="#" method="post">
                     <label class="label-name"></label>
@@ -127,6 +128,7 @@
     </h2>
 <div class="about_in">
        <div class="about__tech">
+           <div class="about__branch"><img src="img/branch.png" alt="flower"/></div>
            <i></i>
            <p>Питание: 2 батарейки типа AAA (не включены)</p>
            <p>Вес: 0,07 кг</p>
@@ -214,6 +216,7 @@
     <div class="review">
         <h2 class="title">Отзывы покупателей touch beauty</h2>
       <div class="review_in">
+          <div class="row">
             <div class="review__item">
                     <div class="review__img"><img src="img/review_img.jpg" alt="review"/></div>
                 <div class="review__text">
@@ -242,35 +245,166 @@
               </div>
 
           </div>
+          </div>
+          <div class="row" id="otherItems" style="display: none">
+              <div class="review__item">
+                  <div class="review__img"><img src="img/review_img.jpg" alt="review"/></div>
+                  <div class="review__text">
+                      <h3>Елизавета, Москва</h3>
+
+                      <p>This is Photoshop's version  of Lorem Ipsum.
+                          Proin gravida nibh vel velit auctor aliquet.
+                          Aenean sollicitudin, lorem quis bibendum auctor,
+                          nisi elit consequat ipsum, nec sagittis sem nibh
+                          id elit. Duis sed odio sit amet nibh vulputate
+                          cursus a sit amet mauris. Morbi accumsan ipsum
+                          velit. Nam nec tellus a odio tincidunt auctor a
+                          ornare odio. Sed non  </p>
+                  </div>
+
+              </div>
+              <div class="review__item">
+                  <div class="review__img"><img src="img/review_img.jpg" alt="review"/></div>
+                  <div class="review__text">
+                      <h3>Катя, Питер</h3>
+
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor,
+                          nisi elit consequat ipsum, nec sagittis sem nibh
+                          id elit. Duis sed odio sit amet nibh vulputate cursus
+                          a sit amet mauris. Morbi accumsan ipsum velit. Nam  </p>
+                  </div>
+
+              </div>
+          </div>
        <div class="review__buttons">
-           <a class="button review__button-more" href="#">еще отзывы</a>
+           <a class="button review__button-more" id="moreReviews" href="#">еще отзывы</a>
            <a class="button review__button-add" href="#"><span>+</span> добавить</a>
        </div>
 
       </div>
 
     </div>
+
+<div class="action">
+    <div class="action_in">
+        <div class="action__img"><img src="img/action-device.jpg" alt="device"/></div>
+        <div class="action__text">
+            <div class="action__hurry">Торопитесь!<br />
+                До конца акции осталось</div>
+            <h3>Супер цена:</h3>
+            <div class="action__price">
+                <span class="action__price--old">9 999 p.</span><br />
+                8 999 p.
+            </div>
+        </div>
+        <div class="form dream__form action__form">
+            <div class="caption">
+                <h3>закажи сейчас по супер цене!</h3>
+                <div class="counter">
+                    <p></p>
+
+                    <ul class="count_line">
+
+                        <li>
+                            <span class="h"></span>
+
+                            <p></p>
+                        </li>
+
+                        <li>
+                            <span class="m"></span>
+
+                            <p></p>
+                        </li>
+
+                        <li>
+                            <span class="s last"></span>
+
+                            <p></p>
+                        </li>
+
+                        <br class="cb">
+                    </ul>
+                </div>
+            </div>
+            <div class="frm" id="form5">
+
+                <form action="#" method="post">
+                    <label class="label-name"></label>
+                    <input type="text" name="name" class="name required" placeholder="Имя">
+                    <label class="label-phone"></label>
+                    <input type="text" name="phone" class="phone required"
+                           placeholder="Телефон">
+                    <button class="button">заказать</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
     <div class="also">
-        <h2 class="title">С этими товарами <span>заказывают также:</span></h2>
+        <h2 class="title">С этим товаром заказывают также</h2>
 
         <div class="also_in">
             <div class="also__item">
-                <div class="also__img"><img src="img/also_img1.jpg" alt="watch"/></div>
-                <div class="also__half">
-                    <h3 class="also__caption"><span>GENEVA</span> Watch pink color</h3>
+            <h3 class="also__caption">Название название</h3>
+            <div class="also__img"><img src="img/also_img.jpg" alt="watch"/></div>
+            <div class="also__price">
+                <span class="also__price--old">5 999 p.</span><br />
+                3 999 p.
+            </div>
 
-                    <div class="also__price">
-                        <h3>990<span> руб.</span></h3>
-                        <h4>1690 <span>руб.</span></h4>
-                    </div>
+            <div class="also__form">
+                <form id="form2" action="#" method="post">
+                    <label class="label-name"></label>
+                    <input type="text" name="name" class="name required" placeholder="Ваше имя">
+                    <label class="label-phone"></label>
+                    <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
+                    <button class="button button--form">заказать</button>
+                    <a href="#about-popup" class="button button--about fancybox">о товаре</a>
+                </form>
+            </div>
 
-                    <div class="also__form">
-                        <form id="form1" action="#" method="post">
-                            <input type="text" name="name" class="name required" placeholder="Ваше имя">
-                            <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
-                            <button class="button">заказать</button>
-                        </form>
-                    </div>
+        </div>
+            <div class="also__item">
+                <h3 class="also__caption">Название название</h3>
+                <div class="also__img"><img src="img/also_img.jpg" alt="watch"/></div>
+                <div class="also__price">
+                    <span class="also__price--old">5 999 p.</span><br />
+                    3 999 p.
+                </div>
+
+                <div class="also__form">
+                    <form id="form3" action="#" method="post">
+                        <label class="label-name"></label>
+                        <input type="text" name="name" class="name required" placeholder="Ваше имя">
+                        <label class="label-phone"></label>
+                        <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
+                        <button class="button button--form">заказать</button>
+                        <a href="#about-popup" class="button button--about fancybox">о товаре</a>
+                    </form>
+                </div>
+
+            </div>
+            <div class="also__item">
+                <h3 class="also__caption">Название название</h3>
+                <div class="also__img"><img src="img/also_img.jpg" alt="watch"/></div>
+                <div class="also__price">
+                    <span class="also__price--old">5 999 p.</span><br />
+                    3 999 p.
+                </div>
+
+                <div class="also__form">
+                    <form id="form4" action="#" method="post">
+                        <label class="label-name"></label>
+                        <input type="text" name="name" class="name required" placeholder="Ваше имя">
+                        <label class="label-phone"></label>
+                        <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
+                        <button class="button button--form">заказать</button>
+                        <a href="#about-popup" class="button button--about fancybox">о товаре</a>
+                    </form>
                 </div>
 
             </div>
@@ -280,20 +414,29 @@
 
         </div>
     </div>
-    <div class="bottom">
-
-    </div>
-
-    <footer>
 
 
-    </footer>
 
  </div>
 
 </div>
 <!-- END out-->
-
+<div class="about-popup" id="about-popup" style="display: none">
+    <div class="about-popup__img"><img src="img/about-popup_img.jpg" alt="about"/></div>
+    <div class="about-popup__text">
+        <h3>Название название</h3>
+        <p>This is Photoshop's version  of Lorem Ipsum.
+            Proin gravida nibh vel velit auctor aliquet.
+            Aenean sollicitudin, lorem quis bibendum auctor,
+            eu felis dapibus condimentum sit amet a augue.
+            Sed non neque elit. Sed ut imperdiet nisi. Proin
+            condimentum fermentum nunc. Etiam pharetra, erat
+            sed fermentum feugiat, velit mauris egestas quam
+            , ut aliquam massa nisl quis neque. Suspendisse in
+            orci enim.</p>
+        <h4>3 999 р.</h4>
+    </div>
+</div>
 
 
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>

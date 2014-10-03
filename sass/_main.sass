@@ -232,7 +232,12 @@ header
       margin-bottom: 10px
       span
         text-transform: uppercase
-
+  &__branch
+    position: absolute
+    top: -175px
+    left: -95px
+    img
+      display: block
   &__text
     +clr
     float: left
@@ -372,7 +377,7 @@ header
     display: inline-block
     width: 470px
     margin-right: 8px
-    margin-top: 100px
+    margin-top: 45px
     margin-bottom: 15px
     vertical-align: top
     &:last-child
@@ -435,12 +440,166 @@ header
       font-size: 24px
       line-height: 13px
 
+.action
+  +clr
+  padding-top: 55px
+  .action_in
+    @extend %in
+    width: 910px
+    +clr
+  &__img
+    +clr
+    float: left
+    width: 393px
+    img
+
+      display: block
+  &__text
+    text-align: center
+    +clr
+    margin-left: 35px
+    float: left
+    width: 140px
+    h3
+      +rr
+      color: #625d74
+      font-size: 24px
+  &__hurry
+    line-height: 1em
+    margin-top: 40px
+    margin-bottom: 80px
+    position: relative
+    font-family: 'robotolight'
+    font-size: 18px
+    color: #888888
+    &:after
+      position: absolute
+      content: ''
+      bottom: -30px
+      right: -50px
+      +s(action-arrow_ico)
+  &__price
+    text-align: center
+    +rr
+    color: #a21817
+    font-size: 32px
+    line-height: 1em
+  &__price--old
+    color: #acacac
+    font-size: 24px
+    position: relative
+    &:after
+      position: absolute
+      content: ""
+      left: 0
+      right: 0
+      height: 0
+      top: 18px
+      border: solid 1px
+
+  &__form
+    +clr
+    float: right
+
+
+.also
+  border-top: dashed 3px rgb(217,217,217)
+  margin-top: 90px
+  padding-bottom: 95px
+  h2
+    display: inline-block
+    padding: 0 20px
+    background: #ffffff
+    position: relative
+    top: -20px
+    left: 50%
+    +transform(translate(-50%))
+  .also_in
+    @extend %in
+    width: 860px
+  &__item
+    padding-bottom: 25px
+    padding-top: 33px
+    text-align: center
+    display: inline-block
+    margin-right: 15px
+    margin-top: 50px
+    width: 270px
+    border: 1px solid #d9d9d9
+    vertical-align: top
+    +border-radius(21px)
+    +background-clip(padding-box)
+    &:last-child
+      margin-right: 0
+  &__caption
+    color: #625d74
+    +rr
+    font-size: 22px
+  &__img
+    margin-top: 20px
+    display: inline-block
+    width: 250px
+    height: 169px
+    img
+      display: block
+  &__price
+    text-align: center
+    +rr
+    color: #a21817
+    font-size: 32px
+    line-height: 1em
+  &__price--old
+    color: #acacac
+    font-size: 24px
+    position: relative
+    &:after
+      position: absolute
+      content: ""
+      left: 0
+      right: 0
+      height: 0
+      top: 18px
+      border: solid 1px
+  &__form
+    margin-top: 22px
+    .button--form
+      background: rgb(98,93,116)
+      padding: 6px 32px
+      &:hover
+        background-color: lighten(rgb(98,93,116), 10%)
+    .button--about
+      display: inline-block
+      background: rgb(125, 185, 174)
+      margin-top: 8px
+      &:hover
+        background-color: lighten(rgb(125, 185, 174), 10%)
 
 
 
-.bottom
+.about-popup
+  width: 610px
+  background: #ffffff
+  +border-radius(20px)
+  text-align: center
+  padding: 35px
+  &__img
+    display: inline-block
+    width: 530px
+    height: 220px
+    img
+      display: block
+  &__text
+    +rr
+    h3
+      font-size: 24px
+      color: #625d74
+      margin: 25px 0
+    p
+      font-size: 18px
+      color: #888888
+      text-align: left
 
-
-
-
-footer
+    h4
+      font-size: 32px
+      color: #a21817
+      margin-top: 14px

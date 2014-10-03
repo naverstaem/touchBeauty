@@ -82,6 +82,7 @@ body
   position: relative
   margin: 0 auto
   width: 1120px
+  overflow: hidden
 input, textarea
   +placeholder
     font-size: 16px
@@ -95,8 +96,8 @@ input, textarea
 
 .myFancyClose
   position: absolute
-  top: -37px
-  right: -38px
+  top: -16px
+  right: -17px
   +s(close)
 
 .btn
@@ -114,13 +115,7 @@ input, textarea
   &:hover
     color: #7db9ad
     background-color: lighten(#ffffff,10%)
-.button--blue
-  background-color: #55c9c9
-  +box-shadow(0 2px 0 #44aaa9, inset 0 -1px 0 rgba(255,255,255,.1))
-  color: #287c7c
-  font-size: 23px
-  &:hover
-    background-color: lighten(#55c9c9, 20%)
+
 .title
   text-align: center
   font-size: 30px
