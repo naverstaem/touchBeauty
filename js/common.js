@@ -62,6 +62,48 @@ head.ready(function() {
     });
 
 
+    //yet another scrolling with hightlight effect (works for me)
+//each marker link would be with section class
+//.page is class of page without top menu )
+// Navigation
+    $('.js-nav a').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+            $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 20
+        }, 500, 'swing', function () {
+            // window.location.hash = target;
+        });
+    });
+
+    function navScroll(){
+        $('.section').each(function(){
+            var pos = $(this).offset().top;
+            var id = $(this).attr('id');
+            var top = ($('.page').offset().top - 80);
+            if( $(window).scrollTop() >= (pos - 79)){
+                //$('.js-nav li').removeClass('is-active');
+                $('.js-nav li a').removeClass('is-active');
+                //$('[href = #'+id+']').parent().addClass('is-active');
+                $('[href = #'+id+']').addClass('is-active');
+            }
+            if($(window).scrollTop() < top){
+                //$('.js-nav li').removeClass('is-active');
+                $('.js-nav li a').removeClass('is-active');
+
+            }
+        });
+    }
+
+    $(window).scroll(function() {
+        navScroll();
+    });
+
+
+
     (function ($) {
         // Counter
 
