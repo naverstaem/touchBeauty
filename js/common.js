@@ -25,6 +25,19 @@ head.ready(function() {
 //
 //        };
 //    });
+
+
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > 200 && !$('.scrollMenu').hasClass('open') ) {
+            $('.scrollMenu').addClass('open');
+            $('.scrollMenu').slideDown();
+        } else if ( $(this).scrollTop() <= 200 ) {
+            $('.scrollMenu').removeClass('open');
+            $('.scrollMenu').slideUp();
+        }
+    });
+
+
    $('#moreReviews').click(function () {
       $('#otherItems').slideToggle("normal");
        return false;

@@ -35,9 +35,9 @@ input::-moz-placeholder, textarea::-moz-placeholder { font-size: 16px; color: #b
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-size: 16px; color: #b8b8b8; font-family: "robotoitalic"; }
 input::placeholder, textarea::placeholder { font-size: 16px; color: #b8b8b8; font-family: "robotoitalic"; }
 
-.top .top_in, header .header_in, .dream .dream_in, .about .about_in, .specs .specs_in, .work .work_in, .review .review_in, .action .action_in, .also .also_in { max-width: 1200px; width: 960px; margin-left: auto; margin-right: auto; }
+.top .top_in, .scrollMenu .top_in, header .header_in, .dream .dream_in, .about .about_in, .specs .specs_in, .work .work_in, .review .review_in, .action .action_in, .also .also_in { max-width: 1200px; width: 960px; margin-left: auto; margin-right: auto; }
 
-.myFancyClose { position: absolute; top: -16px; right: -38px; background: url('../img/icons-s223564f3dc.png') 0 -88px no-repeat; width: 14px; height: 12px; }
+.myFancyClose { position: absolute; top: -16px; right: -17px; background: url('../img/icons-s223564f3dc.png') 0 -88px no-repeat; width: 14px; height: 12px; }
 
 .btn { display: inline-block; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; background: #7db9ad; padding: 3px 24px; color: #ffffff; text-transform: uppercase; font-family: "robotomedium"; font-size: 14px; border: 3px solid #7db9ad; text-decoration: none; -moz-transition: background, 0.5s; -o-transition: background, 0.5s; -webkit-transition: background, 0.5s; transition: background, 0.5s; }
 .btn:hover { color: #7db9ad; background-color: white; }
@@ -83,24 +83,24 @@ form input.phone { background: #fff url(../img/phone_ico.png) no-repeat 12px 10p
 .l .l-col3 { float: right; width: 406px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .l .l-col12 { float: left; width: 594px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.top { padding-top: 30px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; height: 90px; }
-.top:after { content: " "; display: table; clear: both; }
-.top .top_in { *zoom: 1; }
-.top .top_in:after { content: " "; display: table; clear: both; }
-.top nav { float: left; }
-.top nav ul { font-size: 14px; padding: 0; }
-.top nav ul li { display: inline-block; float: left; margin-right: 50px; font-family: "robotoregular"; color: #625d74; text-transform: uppercase; line-height: 1em; }
-.top nav ul li:last-child { margin-right: 0; }
-.top nav ul li a { text-decoration: none; color: inherit; border-bottom: solid 1px; }
-.top nav ul li a:hover { border-bottom: solid 3px; }
-.top nav ul li a.is-active { border-bottom: solid 3px; }
-.top .top__callme { float: left; margin-left: 108px; text-align: right; margin-top: -6px; }
-.top .top__phone { float: left; position: relative; margin-left: 35px; }
-.top .top__phone:before { position: absolute; content: ""; background: url('../img/icons-s223564f3dc.png') 0 -149px no-repeat; width: 12px; height: 16px; top: -8px; left: -20px; }
-.top .top__phone a { vertical-align: top; }
-.top .top__phone h3 { font-size: 18px; color: #000; line-height: 1em; font-family: "robotolight"; font-weight: normal; margin-top: -8px; margin-bottom: 8px; }
-.top .top__callback { float: left; }
-.top .top__callback h3 { color: #949494; font-size: 13px; margin-right: 20px; font-family: "robotoregular"; font-weight: normal; }
+.top, .scrollMenu { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; height: 90px; }
+.top:after, .scrollMenu:after { content: " "; display: table; clear: both; }
+.top .top_in, .scrollMenu .top_in { *zoom: 1; padding-top: 30px; }
+.top .top_in:after, .scrollMenu .top_in:after { content: " "; display: table; clear: both; }
+.top nav, .scrollMenu nav { float: left; }
+.top nav ul, .scrollMenu nav ul { font-size: 14px; padding: 0; }
+.top nav ul li, .scrollMenu nav ul li { display: inline-block; float: left; margin-right: 50px; font-family: "robotoregular"; color: #625d74; text-transform: uppercase; line-height: 1em; }
+.top nav ul li:last-child, .scrollMenu nav ul li:last-child { margin-right: 0; }
+.top nav ul li a, .scrollMenu nav ul li a { text-decoration: none; color: inherit; border-bottom: solid 1px; }
+.top nav ul li a:hover, .scrollMenu nav ul li a:hover { border-bottom: solid 3px; }
+.top nav ul li a.is-active, .scrollMenu nav ul li a.is-active { border-bottom: solid 3px; }
+.top .top__callme, .scrollMenu .top__callme { float: left; margin-left: 108px; text-align: right; margin-top: -6px; }
+.top .top__phone, .scrollMenu .top__phone { float: left; position: relative; margin-left: 35px; }
+.top .top__phone:before, .scrollMenu .top__phone:before { position: absolute; content: ""; background: url('../img/icons-s223564f3dc.png') 0 -149px no-repeat; width: 12px; height: 16px; top: -8px; left: -20px; }
+.top .top__phone a, .scrollMenu .top__phone a { vertical-align: top; }
+.top .top__phone h3, .scrollMenu .top__phone h3 { font-size: 18px; color: #000; line-height: 1em; font-family: "robotolight"; font-weight: normal; margin-top: -8px; margin-bottom: 8px; }
+.top .top__callback, .scrollMenu .top__callback { float: left; }
+.top .top__callback h3, .scrollMenu .top__callback h3 { color: #949494; font-size: 13px; margin-right: 20px; font-family: "robotoregular"; font-weight: normal; }
 
 header { *zoom: 1; }
 header:after { content: " "; display: table; clear: both; }
@@ -114,6 +114,10 @@ header .header__text h3, header .header__text h1 { font-family: "robotoregular";
 header .header__text h4, header .header__text .frm h5, .frm header .header__text h5 { font-size: 28px; color: #535353; font-family: "robotoregular"; font-weight: normal; font-style: normal; margin-top: 10px; }
 header .header__text h5 { position: relative; font-family: "robotoregular"; font-weight: normal; font-style: normal; font-size: 18px; margin-top: 90px; padding-left: 18px; }
 header .header__text h5:before { position: absolute; content: ""; border-left: solid 5px #56caca; top: 4px; bottom: 4px; left: 0; }
+
+.scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(255, 255, 255, 0.8); }
+.scrollMenu .top_in { padding-top: 20px; }
+.scrollMenu .top, .scrollMenu .scrollMenu { height: 0; }
 
 .dream { *zoom: 1; padding-top: 40px; }
 .dream:after { content: " "; display: table; clear: both; }

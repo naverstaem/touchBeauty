@@ -3,13 +3,13 @@
 
 
 .top
-  padding-top: 30px
   +box
   +clr
   height: 90px
   .top_in
     @extend %in
     +clr
+    padding-top: 30px
   nav
     float: left
     ul
@@ -126,7 +126,23 @@ header
         left: 0
 
 
-
+.scrollMenu
+  //@extend header
+  @extend .top
+  .top_in
+    padding-top: 20px
+  position: fixed
+  z-index: 999
+  width: 100%
+  top: 0
+  left: 0
+  bottom: auto
+  display: none
+  height: 60px
+  +box
+  background: rgba(#ffffff, .8)
+  .top
+    height: 0
 
 .dream
   +clr
